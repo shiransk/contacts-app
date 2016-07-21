@@ -1,0 +1,28 @@
+<table class="table table-hover">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Phone number</th>
+  </tr>
+  <% @contacts.each do |contact| %> 
+  <tr>
+    <td><%= contact.first_name %></td>
+    <td><%= contact.first_name %></td>
+    <td><%=contact.email %></td>
+    <td> <%=contact.phone_number %></td>
+  </tr>
+  <%end%>
+</table>
+
+<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+  Loading state
+</button>
+
+<script>
+  $('#myButton').on('click', function () {
+    var $btn = $(this).button('loading')
+    // business logic...
+    $btn.button('reset')
+  })
+</script>
